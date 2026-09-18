@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biblioteca Escolar - Login</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+<link rel="stylesheet" href="../css_global/style.css">
+<link rel="stylesheet" href="login.css">
+
+</head>
+
+<body data-bs-theme="light">
+
+<div class="card login-card">
+
+<div class="topo">
+
+<div class="logo">
+
+<i class="bi bi-book-half"></i>
+
+</div>
+
+<h2>Biblioteca Escolar</h2>
+
+<p>Sistema de Gerenciamento de Livros</p>
+
+</div>
+
+<div class="card-body">
+
+<!-- LOGIN -->
+
+<div id="login">
+
+<h3 class="text-center mb-4">
+
+Bem-vindo!
+
+</h3>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+E-mail
+
+</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+
+<i class="bi bi-envelope-fill"></i>
+
+</span>
+
+<input
+type="email"
+class="form-control"
+id="emailLogin"
+placeholder="Digite seu e-mail">
+
+</div>
+
+</div>
+
+<div class="mb-4">
+
+<label class="form-label">
+
+Senha
+
+</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+
+<i class="bi bi-lock-fill"></i>
+
+</span>
+
+<input
+type="password"
+class="form-control"
+id="senhaLogin"
+placeholder="Digite sua senha">
+
+</div>
+
+</div>
+
+<div class="d-grid">
+
+<button
+class="btn btn-primary btn-login"
+onclick="entrar()">
+
+Entrar
+
+</button>
+
+</div>
+
+<p class="text-center mt-4">
+
+Não possui uma conta?
+
+<br>
+
+<span
+class="link"
+onclick="mostrarCadastro()">
+
+Cadastre-se
+
+</span>
+
+</p>
+
+</div>
+
+<!-- CADASTRO -->
+
+<div id="cadastro">
+
+<h3 class="text-center mb-4">
+
+Criar Conta
+
+</h3>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Nome Completo
+
+</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+
+<i class="bi bi-person-vcard-fill"></i>
+
+</span>
+
+<input
+type="text"
+class="form-control"
+id="nome"
+placeholder="Digite seu nome">
+
+</div>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+E-mail
+
+</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+
+<i class="bi bi-envelope-fill"></i>
+
+</span>
+
+<input
+type="email"
+class="form-control"
+id="emailCadastro"
+placeholder="Digite seu e-mail">
+
+</div>
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Senha
+
+</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+
+<i class="bi bi-lock-fill"></i>
+
+</span>
+
+<input
+type="password"
+class="form-control"
+id="senhaCadastro"
+placeholder="Crie uma senha">
+
+</div>
+
+</div>
+
+<div class="mb-4">
+
+<label class="form-label">
+
+Confirmar Senha
+
+</label>
+
+<div class="input-group">
+
+<span class="input-group-text">
+
+<i class="bi bi-shield-lock-fill"></i>
+
+</span>
+
+<input
+type="password"
+class="form-control"
+id="confirmarSenha"
+placeholder="Repita a senha">
+
+</div>
+
+</div>
+
+<div class="d-grid">
+
+<button
+class="btn btn-success btn-login"
+onclick="cadastrar()">
+
+Cadastrar
+
+</button>
+
+</div>
+
+<p class="text-center mt-4">
+
+Já possui uma conta?
+
+<br>
+
+<span
+class="link"
+onclick="mostrarLogin()">
+
+Fazer Login
+
+</span>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
