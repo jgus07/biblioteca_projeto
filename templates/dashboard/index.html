@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biblioteca Escolar</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="../css_global/style.css">
+<link rel="stylesheet" href="index.css">
+
+</head>
+
+<body data-bs-theme="light">
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+
+<div class="container">
+
+<a class="navbar-brand">
+
+<i class="bi bi-book-half"></i>
+
+Biblioteca Escolar
+
+</a>
+
+<div class="d-flex align-items-center gap-2">
+
+<button
+class="btn btn-outline-light"
+onclick="alternarTema()">
+
+<i class="bi bi-moon-stars-fill"></i>
+
+</button>
+
+<span class="text-white">
+
+Olá,
+
+<strong id="nomeUsuario">
+
+Usuário
+
+</strong>
+
+</span>
+
+<button
+class="btn btn-danger"
+onclick="sair()">
+
+<i class="bi bi-box-arrow-right"></i>
+
+Sair
+
+</button>
+
+</div>
+
+</div>
+
+</nav>
+
+<div class="container py-5">
+
+<!-- PESQUISA -->
+
+<div class="card shadow border-0 mb-5">
+
+<div class="card-body">
+
+<h4 class="mb-3">
+
+<i class="bi bi-search"></i>
+
+Pesquisar Livro
+
+</h4>
+
+<div class="input-group">
+
+<input
+type="text"
+class="form-control pesquisa"
+id="pesquisa"
+placeholder="Digite o nome do livro...">
+
+<button
+class="btn btn-primary"
+onclick="pesquisarLivro()">
+
+Pesquisar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="card dashboard-card shadow">
+
+<div class="card-body text-center">
+
+<div class="dashboard-icon text-primary">
+
+<i class="bi bi-book-fill"></i>
+
+</div>
+
+<h5>Total de Livros</h5>
+
+<h2 id="totalLivros">
+
+0
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card dashboard-card shadow">
+
+<div class="card-body text-center">
+
+<div class="dashboard-icon text-success">
+
+<i class="bi bi-check-circle-fill"></i>
+
+</div>
+
+<h5>Disponíveis</h5>
+
+<h2 id="livrosDisponiveis">
+
+0
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card dashboard-card shadow">
+
+<div class="card-body text-center">
+
+<div class="dashboard-icon text-warning">
+
+<i class="bi bi-arrow-left-right"></i>
+
+</div>
+
+<h5>Emprestados</h5>
+
+<h2 id="livrosEmprestados">
+
+0
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+<br>
+
+<h3 class="mb-4">
+
+<i class="bi bi-grid-fill"></i>
+
+Ações Rápidas
+
+</h3>
+
+<div class="row g-4">
+
+<!-- VER LIVROS -->
+
+<div class="col-md-3">
+
+    <div
+        class="card dashboard-card shadow acao h-100"
+        onclick="verLivros()">
+
+        <div class="card-body text-center">
+
+            <div class="dashboard-icon text-primary">
+
+                <i class="bi bi-book"></i>
+
+            </div>
+
+            <h5>Ver Livros</h5>
+
+            <p class="text-muted">
+
+                Consulte todos os livros cadastrados.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ADICIONAR LIVRO -->
+
+<div class="col-md-3">
+
+    <div
+        class="card dashboard-card shadow acao h-100"
+        onclick="adicionarLivro()">
+
+        <div class="card-body text-center">
+
+            <div class="dashboard-icon text-success">
+
+                <i class="bi bi-plus-circle-fill"></i>
+
+            </div>
+
+            <h5>Adicionar Livro</h5>
+
+            <p class="text-muted">
+
+                Cadastre novos livros.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- EMPRESTAR -->
+
+<div class="col-md-3">
+
+    <div
+        class="card dashboard-card shadow acao h-100"
+        onclick="emprestarLivro()">
+
+        <div class="card-body text-center">
+
+            <div class="dashboard-icon text-warning">
+
+                <i class="bi bi-arrow-left-right"></i>
+
+            </div>
+
+            <h5>Emprestar</h5>
+
+            <p class="text-muted">
+
+                Gerencie os empréstimos.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- STATUS -->
+
+<div class="col-md-3">
+
+    <div
+        class="card dashboard-card shadow acao h-100"
+        onclick="statusLivro()">
+
+        <div class="card-body text-center">
+
+            <div class="dashboard-icon text-danger">
+
+                <i class="bi bi-bar-chart-fill"></i>
+
+            </div>
+
+            <h5>Status</h5>
+
+            <p class="text-muted">
+
+                Veja a situação dos livros.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- TABELA -->
+
+<div class="card shadow border-0 mt-5">
+
+    <div class="card-header bg-primary text-white">
+
+        <h5 class="mb-0">
+
+            <i class="bi bi-clock-history"></i>
+
+            Últimos Livros
+
+        </h5>
+
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-hover align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>Título</th>
+
+                    <th>Autor</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaLivros">
+
+                <tr>
+
+                    <td>Dom Casmurro</td>
+
+                    <td>Machado de Assis</td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Disponível
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>O Cortiço</td>
+
+                    <td>Aluísio Azevedo</td>
+
+                    <td>
+
+                        <span class="badge bg-warning text-dark">
+
+                            Emprestado
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Clean Code</td>
+
+                    <td>Robert C. Martin</td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Disponível
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+
+</html>

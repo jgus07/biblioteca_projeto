@@ -1,0 +1,138 @@
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #0d6efd,
+        #0b4db7,
+        #052a63
+    );
+
+    transition:.3s;
+
+}
+
+body[data-bs-theme="dark"]{
+
+    background:linear-gradient(
+        135deg,
+        #081420,
+        #102c57,
+        #1f4e79
+    );
+
+}
+
+.login-card{
+
+    width:430px;
+    border:none;
+    overflow:hidden;
+    animation:aparecer .7s;
+
+}
+
+.topo{
+
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:35px;
+
+}
+
+.topo h2{
+
+    margin-top:10px;
+
+}
+
+.topo p{
+
+    opacity:.9;
+    margin-top:8px;
+
+}
+
+.logo{
+
+    font-size:60px;
+
+}
+
+.card-body{
+
+    padding:35px;
+
+}
+
+.input-group-text{
+
+    background:#0d6efd;
+    color:white;
+    border:none;
+
+}
+
+.form-control{
+
+    height:48px;
+
+}
+
+.form-control:focus{
+
+    box-shadow:none;
+    border-color:#0d6efd;
+
+}
+
+.btn-login{
+
+    height:48px;
+    font-weight:bold;
+
+}
+
+.link{
+
+    color:#0d6efd;
+    cursor:pointer;
+    font-weight:600;
+
+}
+
+.link:hover{
+
+    text-decoration:underline;
+
+}
+
+#cadastro{
+
+    display:none;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}

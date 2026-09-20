@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.card{
+    border-radius:18px;
+}
+
+.btn{
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.navbar-brand{
+    font-weight:bold;
+}
+
+.shadow{
+    box-shadow:0 10px 25px rgba(0,0,0,.15)!important;
+}

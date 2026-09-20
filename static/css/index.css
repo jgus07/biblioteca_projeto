@@ -1,0 +1,69 @@
+body{
+
+    background:#eef2f7;
+
+}
+
+.navbar{
+
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.dashboard-card{
+
+    border:none;
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 15px 25px rgba(0,0,0,.15);
+
+}
+
+.dashboard-icon{
+
+    font-size:45px;
+
+}
+
+.acao{
+
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.acao:hover{
+
+    transform:scale(1.03);
+
+}
+
+.pesquisa{
+
+    border-radius:30px;
+
+}
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.card-header{
+
+    font-weight:bold;
+
+}
+
+.badge{
+
+    font-size:14px;
+    padding:8px 12px;
+
+}
