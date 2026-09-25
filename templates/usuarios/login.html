@@ -104,7 +104,7 @@ placeholder="Digite sua senha">
 
 <button
 class="btn btn-primary btn-login"
-onclick= entrar()>
+onclick= "entrar()">
 
 Entrar
 
@@ -120,7 +120,7 @@ Não possui uma conta?
 
 <span
 class="link"
-onclick= mostrarCadastro()>
+onclick= "mostrarCadastro()">
 
 Cadastre-se
 
@@ -248,7 +248,7 @@ placeholder="Repita a senha">
 
 <button
 class="btn btn-success btn-login"
-onclick= cadastrar()>
+onclick= "cadastrar()">
 
 Cadastrar
 
@@ -264,7 +264,7 @@ Já possui uma conta?
 
 <span
 class="link"
-onclick= mostrarLogin()>
+onclick= "mostrarLogin()">
 
 Fazer Login
 
@@ -280,7 +280,7 @@ Fazer Login
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="../js/script.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
 
 </body>
 

@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dashboard'
-    'livros'
-    'usuarios'
+    'dashboard',
+    'livros',
+    'usuarios',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'biblioteca.urls'
+ROOT_URLCONF = 'setup.urls'
 
 TEMPLATES = [
     {

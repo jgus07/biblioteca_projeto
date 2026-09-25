@@ -87,7 +87,7 @@ function entrar() {
 
         localStorage.setItem("logado", "true");
 
-        window.location.href = "../dashboard/index.html";
+        window.location.href = "{% templates 'dashboard/index.html' %}";
 
     }
 
@@ -107,7 +107,7 @@ function verificarLogin(){
 
     if(localStorage.getItem("logado") != "true"){
 
-        window.location.href = "../usuarios/login.html";
+        window.location.href = "{% templates 'usuarios/login.html' %}";
 
     }
 
@@ -121,7 +121,7 @@ function sair(){
 
     localStorage.removeItem("logado");
 
-    window.location.href = "../usuarios/login.html";
+    window.location.href = "{% templates 'usuarios/login.html' %}";
 
 }
 

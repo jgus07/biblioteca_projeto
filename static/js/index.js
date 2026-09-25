@@ -21,7 +21,7 @@ function verificarLogin(){
 
     if(localStorage.getItem("logado") !== "true"){
 
-        window.location.href = "../usuarios/login.html";
+        window.location.href = "{% templates 'usuarios/login.html' %}";
 
     }
 
@@ -121,7 +121,7 @@ function pesquisarLivro(){
 
 function verLivros(){
 
-    window.location.href = "../livros/consultar.html";
+    window.location.href = "{% templates 'livros/consultar.html' %}";
 
 }
 
@@ -130,7 +130,7 @@ function verLivros(){
 
 function adicionarLivro(){
 
-    window.location.href = "../livros/add.html";
+    window.location.href = "{% templates 'livros/add.html' %}";
 
 }
 
@@ -191,6 +191,6 @@ function sair(){
 
     localStorage.removeItem("logado");
 
-    window.location.href = "../usuarios/login.html";
+    window.location.href = "{% templates 'usuarios/login.html' %}";
 
 }
