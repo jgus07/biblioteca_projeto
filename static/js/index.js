@@ -21,7 +21,7 @@ function verificarLogin(){
 
     if(localStorage.getItem("logado") !== "true"){
 
-        window.location.href = "login.html";
+        window.location.href = "../usuarios/login.html";
 
     }
 
@@ -121,7 +121,7 @@ function pesquisarLivro(){
 
 function verLivros(){
 
-    window.location.href = "../Tela_Consultar/consultar.html";
+    window.location.href = "../livros/consultar.html";
 
 }
 
@@ -130,7 +130,7 @@ function verLivros(){
 
 function adicionarLivro(){
 
-    window.location.href = "../Tela_Add/add.html";
+    window.location.href = "../livros/add.html";
 
 }
 
@@ -191,6 +191,6 @@ function sair(){
 
     localStorage.removeItem("logado");
 
-    window.location.href = "../Tela_Login/login.html";
+    window.location.href = "../usuarios/login.html";
 
 }

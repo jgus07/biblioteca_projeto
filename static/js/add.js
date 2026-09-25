@@ -108,7 +108,7 @@ form.addEventListener("submit", function(event){
 
     setTimeout(function(){
 
-        window.location.href = "../Tela_Inicial/index.html";
+        window.location.href = "../dashboard/index.html";
 
     }, 1500);
 

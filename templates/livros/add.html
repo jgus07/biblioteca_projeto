@@ -27,17 +27,17 @@
 
 
     <!-- CSS Global -->
-
+    {% load static %}
     <link
         rel="stylesheet"
-        href="../css/style.css">
+        href="{% static 'css/style.css' %}">
 
 
     <!-- CSS da página -->
 
     <link
         rel="stylesheet"
-        href="../css/add.css">
+        href="{% static 'css/add.css' %}">
 
 </head>
 
@@ -480,7 +480,7 @@
     </main>
 
 
-    <script src="add.js"></script>
+    <script src="../js/add.js"></script>
 
 </body>
 
