@@ -7,4 +7,5 @@ class Exemplar(models.Model):
     def __str__(self):
         return self.localização
     
-    def __str
+    def __str__(self):
+        return self.status
