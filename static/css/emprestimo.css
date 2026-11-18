@@ -1,0 +1,75 @@
+/* Mesmo fundo do dashboard (index.css), com versão escura */
+body {
+    background: #eef2f7;
+}
+
+body[data-bs-theme="dark"] {
+    background: #0f1720;
+}
+
+/* Linha divisória vertical para telas grandes */
+@media (min-width: 992px) {
+    .border-end-lg {
+        border-right: 1px solid var(--bs-border-color) !important;
+        padding-right: 1.5rem;
+    }
+}
+
+/* Botão voltar igual ao da tela de adicionar livro */
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 10px;
+}
+
+/* Abas */
+.nav-tabs .nav-link {
+    border-radius: 8px 8px 0 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-tabs .nav-link.active {
+    border-top: 3px solid #0d6efd;
+}
+
+/* Campos somente leitura com aparência mais limpa */
+.form-control[readonly] {
+    background-color: var(--bs-tertiary-bg);
+    opacity: 1;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, .12);
+}
+
+/* Lista de obras selecionadas */
+#obrasAdicionadas .list-group-item {
+    border-radius: 10px;
+    margin-bottom: 6px;
+    border: 1px solid var(--bs-border-color);
+}
+
+/* Tabelas */
+.table th {
+    white-space: nowrap;
+}
+
+/* Badges menores nas tabelas e abas */
+.nav-tabs .badge,
+.table .badge {
+    font-size: 12px;
+    padding: 5px 9px;
+}
+
+/* Avisos (toasts) acima do modal */
+.toast-container {
+    z-index: 2000;
+}

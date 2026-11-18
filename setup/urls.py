@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('usuarios.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('livros/', include('livros.urls')),
+    path('emprestimos/', include('emprestimos.urls')),
 ]
