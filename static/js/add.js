@@ -108,7 +108,7 @@ form.addEventListener("submit", function(event){
 
     setTimeout(function(){
 
-        window.location.href = "{% templates 'dashboard/index.html' %}"
+        window.location.href = "{% url 'index_dashboard' %}"
 
     }, 1500);
 

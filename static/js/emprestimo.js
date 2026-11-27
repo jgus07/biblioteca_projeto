@@ -50,7 +50,7 @@ function verificarLogin() {
 
  if (localStorage.getItem("logado") !== "true") {
 
- window.location.href = "login.html";
+ window.location.href = "{% url 'login_usuarios' %}";
 
  return false;
 
@@ -87,7 +87,7 @@ function sair() {
  // Remove só a sessão. A conta ("usuario") precisa continuar salva.
  localStorage.removeItem("logado");
 
- window.location.href = "login.html";
+ window.location.href = "{% url 'login_usuarios' %}";
 
 }
 
